@@ -1,0 +1,211 @@
+/* Additional custom styles */
+body {
+    min-height: 100vh;
+    overflow: hidden;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        background: #1d1d1d;
+      
+  }
+  
+  .dark-mode {
+    --bs-body-bg: #1e1e1e;
+    --bs-body-color: #dcdcdc;
+    --bs-sidebar-bg: #252526;
+    --bs-sidebar-text-color: #dcdcdc;
+    --bs-navbar-bg: #333;
+    --bs-navbar-text-color: #fff;
+    --bs-dropdown-bg: #252526;
+    --bs-dropdown-text-color: #dcdcdc;
+    --bs-dropdown-link-hover-bg: #333333;
+  }
+  
+  .file-explorer {
+    background-color: var(--bs-sidebar-bg);
+    color: var(--bs-sidebar-text-color);
+  }
+  
+  .editor,
+  .preview {
+    width: auto;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    height: calc(100vh - 48px); /* Adjusting height taking into account the header */
+  }
+  
+  .dropdown-menu {
+    background-color: var(--bs-dropdown-bg);
+  }
+  
+  .dropdown-item {
+    color: var(--bs-dropdown-text-color);
+  }
+  
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background-color: var(--bs-dropdown-link-hover-bg);
+  }
+  
+  .editor-header,
+  .preview-header {
+    background-color: var(--bs-navbar-bg);
+    color: var(--bs-navbar-text-color);
+    padding: 0.5rem 1rem;
+  }
+  
+  .editor-content {
+    height: 100%;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    border: none;
+    padding: 1rem;
+  }
+  
+  .preview-content {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Adjustable text and preview area widths */
+  .col-adjustable {
+    transition: width 0.3s ease;
+  }
+  
+  .col-adjustable:hover {
+    cursor: col-resize;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .editor,
+    .preview {
+      height: auto;
+    }
+  }
+  .p-0{
+    padding: 10px !important;
+  }
+  .navbar{
+    padding-top: 10px;
+  }
+  .logo{
+    max-height: 60px;
+  }
+  .nav-link{
+    font-size: 0.8rem !important;
+  }
+
+
+  /* accordion */
+  .accordion-body{
+    max-height: fit-content;
+    color: #fff;
+  }
+  .accordion-button{
+    font-size: 1rem !important;
+    color: #fff !important;
+    font-size: 0.8rem !important;
+    padding: 0.8rem 0.9rem !important;
+  } 
+  
+  
+  /* sidepannel */
+  .sidepanel-collapse{
+    max-width: 25vb;
+  }
+  .centerNavbar-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .midNavbar{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: max-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+  }
+  .rightNavbar{
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+position: absolute;
+top: 15%;
+left:100%;
+transform: translateX(-99%);
+padding-top: 10px;
+width: fit-content !important;
+  }
+  .rightNavbar .nav-item{
+    margin-right: 10px;
+  }
+  .rightNavbar .btn{
+    display: block !important;
+    width: max-content !important;
+    font-size: 0.8rem;
+  }
+  #navbarNav > ul > div.rightNavbar > ul{
+    width: fit-content;
+  }
+
+  /* resizer */
+  .resizer {
+    background: #888;
+    width: 2px; /* Width of the resizer */
+    cursor: ew-resize;
+    height: 100%;
+  }
+.mainscene{
+  display: grid !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  width: fit-content;
+}
+body > div > div > div.col.col-adjustable.editor.d-flex.flex-column > div > div > ul{
+  list-style-type: none;
+  display: inline;
+}
+li{
+  display: inline;
+  padding-left: 1rem;
+}
+.header > li{
+  padding-left: 1rem !important;
+}
+.header{
+  display: block;
+  position: static;
+}
+.file-title{
+  display: inline !important;
+}
+.file-icons{
+  position: relative;
+  display: inline !important;
+  left: 65%;
+  transform: translateX(-99%);
+}
+
+.icon :hover{
+  color: rgb(0, 81, 255);
+  cursor: pointer;
+
+}
+ .close-icon:hover{
+  color: rgb(255, 59, 15);
+  cursor: pointer;
+
+
+}
+.file-icons .icon {
+  margin-left: 0.8rem !important;
+}
+.close-icon{
+  margin-left: 0.8rem !important;
+}
